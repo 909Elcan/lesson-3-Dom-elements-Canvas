@@ -1,0 +1,47 @@
+body{
+    background-color: black;
+}
+
+.General_game{
+       display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+
+.player1_Score{
+    color: rgb(0, 134, 251);
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.player2_Score{
+    color: rgb(253, 5, 5);
+    font-size: 50px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+.Futbool_contex{
+    text-align: center;
+}
+
+.game{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Winner{
+    color: rgb(195, 208, 9);
+    text-align: center;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.Score{
+    display: flex;
+
+    color: aliceblue;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
