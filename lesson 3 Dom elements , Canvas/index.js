@@ -135,10 +135,17 @@ window.addEventListener("keyup", (e) => {
 
 function update() {
   
-    if (keys["w"]) player1.velocityY -= player1.accelaration;
-    else if (keys["s"]) player1.velocityY += player1.accelaration;
-    if (keys["a"]) player1.velocityX -= player1.accelaration;
-    else if (keys["d"]) player1.velocityX += player1.accelaration;
+    if (keys["w"]){
+      player1.velocityY -= player1.accelaration;
+    }
+    else if (keys["s"]){ 
+      player1.velocityY += player1.accelaration;
+    }
+    if (keys["a"]){ 
+      player1.velocityX -= player1.accelaration;}
+    else if (keys["d"]){
+      player1.velocityX += player1.accelaration;
+    }
 
     player1.velocityX = Math.max(-player1.maxSpeed, Math.min(player1.maxSpeed, player1.velocityX));
     player1.velocityY = Math.max(-player1.maxSpeed, Math.min(player1.maxSpeed, player1.velocityY));
@@ -148,10 +155,16 @@ function update() {
     player1.y += player1.velocityY;
 
 
-    if (keys["arrowup"]) player2.velocityY -= player2.accelaration;
-    else if (keys["arrowdown"]) player2.velocityY += player2.accelaration;
+    if (keys["arrowup"]){
+         player2.velocityY -= player2.accelaration;
+    }
+    else if (keys["arrowdown"]){
+      player2.velocityY += player2.accelaration;
+    }
     if (keys["arrowleft"]) player2.velocityX -= player2.accelaration;
-    else if (keys["arrowright"]) player2.velocityX += player2.accelaration;
+    else if (keys["arrowright"]){
+       player2.velocityX += player2.accelaration;
+    }
 
     player2.velocityX = Math.max(-player2.maxSpeed, Math.min(player2.maxSpeed, player2.velocityX));
     player2.velocityY = Math.max(-player2.maxSpeed, Math.min(player2.maxSpeed, player2.velocityY));
@@ -197,18 +210,38 @@ function update() {
         }
     }
 
-    if (Ball.y < 0) { Ball.y = 0; Ball.velocityY = -Ball.velocityY; }
-    if (Ball.y + Ball.height > canvas.height) { Ball.y = canvas.height - Ball.height; Ball.velocityY = -Ball.velocityY; }
+    if (Ball.y < 0) {
+     Ball.y = 0; Ball.velocityY = -Ball.velocityY; 
+    }
+    if (Ball.y + Ball.height > canvas.height) {
+     Ball.y = canvas.height - Ball.height; Ball.velocityY = -Ball.velocityY; 
+    }
 
-    if (player1.x < 0) { player1.x = 0; player1.velocityX = -player1.velocityX; }
-    if (player1.y < 0) { player1.y = 0; player1.velocityY = -player1.velocityY; }
-    if (player1.x + player1.width > canvas.width) { player1.x = canvas.width - player1.width; player1.velocityX = -player1.velocityX; }
-    if (player1.y + player1.height > canvas.height) { player1.y = canvas.height - player1.height; player1.velocityY = -player1.velocityY; }
+    if (player1.x < 0) {
+     player1.x = 0; player1.velocityX = -player1.velocityX; 
+    }
+    if (player1.y < 0) {
+     player1.y = 0; player1.velocityY = -player1.velocityY; 
+    }
+    if (player1.x + player1.width > canvas.width) { 
+     player1.x = canvas.width - player1.width; player1.velocityX = -player1.velocityX; 
+    }
+    if (player1.y + player1.height > canvas.height) {
+     player1.y = canvas.height - player1.height; player1.velocityY = -player1.velocityY; 
+    }
 
-    if (player2.x < 0) { player2.x = 0; player2.velocityX = -player2.velocityX; }
-    if (player2.y < 0) { player2.y = 0; player2.velocityY = -player2.velocityY; }
-    if (player2.x + player2.width > canvas.width) { player2.x = canvas.width - player2.width; player2.velocityX = -player2.velocityX; }
-    if (player2.y + player2.height > canvas.height) { player2.y = canvas.height - player2.height; player2.velocityY = -player2.velocityY; }
+    if (player2.x < 0) {
+     player2.x = 0; player2.velocityX = -player2.velocityX;
+    }
+    if (player2.y < 0) {
+     player2.y = 0; player2.velocityY = -player2.velocityY;
+    }
+    if (player2.x + player2.width > canvas.width) { 
+     player2.x = canvas.width - player2.width; player2.velocityX = -player2.velocityX; 
+    }
+    if (player2.y + player2.height > canvas.height) { 
+     player2.y = canvas.height - player2.height; player2.velocityY = -player2.velocityY; 
+    }
 }
 
 function draw() {
